@@ -11,14 +11,17 @@ VS_VERSION_INFO VERSIONINFO
 BEGIN
   BLOCK "StringFileInfo"
   BEGIN
-    VALUE "CompanyName", "William Kent"
-    VALUE "FileDescription", "MRT Core Resource Loader"
-    VALUE "FileVersion", "1.0"
-    VALUE "InternalName", "MRM.dll"
-    VALUE "LegalCopyright", "Copyright \256 2025 William Kent. Licensed under MIT."
-    VALUE "OriginalFilename", "MRM.dll"
-    VALUE "ProductName", "MRT Core Resource System"
-    VALUE "ProductVersion", "1.0"
+    BLOCK "040904b0"
+    BEGIN
+      VALUE "CompanyName", "William Kent"
+      VALUE "FileDescription", "MRT Core Resource Loader"
+      VALUE "FileVersion", "1.0"
+      VALUE "InternalName", "MRM.dll"
+      VALUE "LegalCopyright", "Copyright © 2025 William Kent. Licensed under MIT."
+      VALUE "OriginalFilename", "MRM.dll"
+      VALUE "ProductName", "MRT Core Resource System"
+      VALUE "ProductVersion", "1.0"
+    END
   END
   BLOCK "VarFileInfo"
   BEGIN
