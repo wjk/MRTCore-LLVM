@@ -16,7 +16,7 @@ function(target_win32_resources target input)
     set(output ${CMAKE_CURRENT_BINARY_DIR}/${input_base}.o)
 
     add_custom_command(OUTPUT ${output}
-        COMMAND ${WINDRES_EXECUTABLE} ${flags} --output=${output} ${sources}
+        COMMAND ${WINDRES_EXECUTABLE} ${flags} --codepage=65001 --output=${output} ${sources}
         DEPENDS ${sources}
         COMMENT "windres ${input}" VERBATIM)
     target_sources(${target} PRIVATE ${output})
