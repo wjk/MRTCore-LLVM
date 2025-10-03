@@ -1,0 +1,53 @@
+add_library(MRM SHARED)
+set_target_properties(MRM PROPERTIES PREFIX "")
+
+target_sources(MRM PRIVATE
+  MRM.cpp
+  MRM.def
+
+  mrmmin/Atom.cpp
+  mrmmin/AtomGroup.cpp
+  mrmmin/BaseFile.cpp
+  mrmmin/BaseProviders.cpp
+  mrmmin/BaseQualifierTypes.cpp
+  mrmmin/BlobResult.cpp
+  mrmmin/BlobResultImpl.cpp
+  mrmmin/Checksums.cpp
+  mrmmin/CoreEnvironment.cpp
+  mrmmin/CoreProfile.cpp
+  mrmmin/CoreQualifierTypes.cpp
+  mrmmin/DecisionInfo.cpp
+  mrmmin/DecisionInfoBuilder.cpp
+  mrmmin/DefObject.cpp
+  mrmmin/Environment.cpp
+  mrmmin/FileAtomPool.cpp
+  mrmmin/FileDataSection.cpp
+  mrmmin/FileFileList.cpp
+  mrmmin/HNames.cpp
+  mrmmin/HSchema.cpp
+  mrmmin/ManagedFiles.cpp
+  mrmmin/Managers.cpp
+  mrmmin/MrmFile.cpp
+  mrmmin/MrmTraceLogging.cpp
+  mrmmin/Platform.cpp
+  mrmmin/PriFile.cpp
+  mrmmin/PriFileManager.cpp
+  mrmmin/RemapInfo.cpp
+  mrmmin/Resolvers.cpp
+  mrmmin/ResourceLink.cpp
+  mrmmin/ResourceMap.cpp
+  mrmmin/ReverseMap.cpp
+  mrmmin/RtlProfile.cpp
+  mrmmin/SchemaCollection.cpp
+  mrmmin/StaticAtomPool.cpp
+  mrmmin/StringResult.cpp
+  mrmmin/StringResultImpl.cpp
+  mrmmin/UnifiedView.cpp
+  mrmmin/Util.cpp
+)
+
+target_include_directories(MRM PRIVATE include)
+target_compile_definitions(MRM PRIVATE UNICODE __in= __out= __deref_opt_out_opt=)
+target_compile_options(MRM PRIVATE "-D__field_ecount(x)=" "-D__in_bcount_opt(x)=" "-D__out_ecount_opt(x)=" "-D__deref_out_bcount(x)=")
+target_compile_options(MRM PRIVATE -Wno-inconsistent-missing-override -Wno-microsoft-template -Wno-extern-initializer -Wno-return-type)
+target_link_libraries(MRM PRIVATE wil pathcch)
