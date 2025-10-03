@@ -46,6 +46,7 @@ target_sources(MRM PRIVATE
   mrmmin/Util.cpp
 )
 
+target_win32_resources(MRM rsrc.rc)
 target_include_directories(MRM PRIVATE include)
 target_compile_definitions(MRM PRIVATE UNICODE __in= __out= __deref_opt_out_opt=)
 target_compile_options(MRM PRIVATE "-D__field_ecount(x)=" "-D__in_bcount_opt(x)=" "-D__out_ecount_opt(x)=" "-D__deref_out_bcount(x)=")
