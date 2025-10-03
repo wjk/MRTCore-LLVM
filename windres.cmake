@@ -17,6 +17,7 @@ function(target_win32_resources target input)
 
     add_custom_command(OUTPUT ${output}
         COMMAND ${WINDRES_EXECUTABLE} ${flags} --output=${output} ${sources}
+        DEPENDS ${sources}
         COMMENT "windres ${input}" VERBATIM)
     target_sources(${target} PRIVATE ${output})
 endfunction()
