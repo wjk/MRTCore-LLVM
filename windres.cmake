@@ -13,7 +13,7 @@ function(target_win32_resources target input)
     endforeach()
 
     get_filename_component(input_base ${input} NAME_WE)
-    set(output ${CMAKE_CURRENT_BINARY_DIR}/${input_base}.o)
+    set(output ${CMAKE_CURRENT_BINARY_DIR}/${input_base}.obj)
 
     add_custom_command(OUTPUT ${output}
         COMMAND ${WINDRES_EXECUTABLE} ${flags} --codepage=65001 --output=${output} ${sources}
